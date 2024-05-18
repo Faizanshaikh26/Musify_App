@@ -11,7 +11,7 @@ function Home() {
         <Navbar/>
         <Slider/>
         <DisplayHome/>
-        <Player/>
+        {/* <Player/> */}
     </div>
     </>
   )

@@ -49,7 +49,7 @@ const Slider = () => {
 
   return (
     <div className="relative w-full overflow-hidden mt-3 rounded">
-    <div className="relative h-32 md:h-80 lg:h-96  ">
+    <div className="relative h-40 md:h-80 lg:h-96  ">
       {slides.map((slide, index) => (
         <div
           key={slide.id}

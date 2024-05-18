@@ -5,6 +5,7 @@ import Sidebar from './Components/Sidebar'
 import './App.css'
 import Displayalbum from './Components/Displayalbum'
 import { albumsData } from './assets/assets'
+import Player from './Components/Player'
 
 
 function App() {
@@ -30,7 +31,12 @@ if(isAlbum){
       <Route path='/album/:id' element={<Displayalbum/>}/>
      
     </Routes>
+    <div className='fixed bottom-0 overflow-hidden mb-1 z-10 lg:w-[95%] md:w-[93%]'>
+    <Player/>
+    </div>
+
     </Sidebar>
+  
    </div>
     </>
   )
