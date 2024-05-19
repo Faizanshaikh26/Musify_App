@@ -6,6 +6,7 @@ import './App.css'
 import Displayalbum from './Components/Displayalbum'
 import { albumsData } from './assets/assets'
 import Player from './Components/Player'
+import { usePlayer } from './Context/PlayerContext'
 
 
 function App() {
@@ -22,9 +23,11 @@ if(isAlbum){
   displatRef.current.style.background=`#121212`
 }
 })
+const  {audioRef,track}=usePlayer();
   return (
     <>
    <div  ref={displatRef} className='bg-black text-white h-full'>
+   
    <Sidebar>
     <Routes>
       <Route path='/' element={<Home/>}/>
@@ -34,6 +37,7 @@ if(isAlbum){
     <div className='fixed bottom-0 overflow-hidden mb-1 z-10 lg:w-[95%] md:w-[93%]'>
     <Player/>
     </div>
+    <audio ref={audioRef} src={track.file} preload='auto'></audio>
 
     </Sidebar>
   

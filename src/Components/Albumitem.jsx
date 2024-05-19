@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Albumitem({image,name,desc,id}) {
     const navigate=useNavigate()
+    
   return (
     <>
     

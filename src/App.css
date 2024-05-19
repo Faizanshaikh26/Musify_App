@@ -5,3 +5,11 @@ body{
     padding: 0;
     
 }
+
+.seek-ring-play {
+    transition: left 0.5s ease-in-out; /* Example transition */
+  }
+  
+  .seek-ring-pause {
+    transition: left 0.5s ease-in-out; /* Example transition */
+  }

@@ -2,14 +2,16 @@ import React from "react";
 import Navbar from "./Navbar";
 import { useParams } from "react-router-dom";
 import { albumsData, assets, songsData } from "../assets/assets";
+import { usePlayer } from "../Context/PlayerContext";
 
 function Displayalbum() {
   const { id } = useParams();
   const albumData = albumsData[id];
+  const {playWithId}=usePlayer()  
   return (
     <>
       <Navbar />
-      <div className="mt-6 flex gap-5 flex-col md:flex-row md:items-end">
+      <div onClick={()=>playWithId(id)} className="mt-6 flex gap-5 flex-col md:flex-row md:items-end">
         <img src={albumData.image} alt="" className="w-48 rounded" />
         <div className="flex flex-col">
           <p>Playlist</p>
@@ -40,7 +42,7 @@ function Displayalbum() {
       {songsData.map((item, index) => {
         return (
           <>
-            <div
+            <div onClick={()=>playWithId(item.id)} 
               key={index}
               className="grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 items-center text-[#a7a7a7] hover:bg-[#ffffff2b] cursor-pointer"
             >
