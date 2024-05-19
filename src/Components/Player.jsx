@@ -19,7 +19,7 @@ function Player() {
                 <p className="text-cyan-500 dark:text-cyan-400 text-sm leading-6">
                   {/* <abbr title="Track">Track:</abbr> 05 */}
                 </p>
-                <h2 className="text-slate-200 dark:text-slate-400 leading-6 truncate text-[16px] md:text-[19px] ">
+                <h2 className="text-slate-200 dark:text-slate-400 leading-6 truncate text-[18px] md:text-[19px] ">
                   Music: New Album The Lorem
                 </h2>
                 <p className="text-slate-200 dark:text-slate-50 text-[12px] md:text-[15px]">
